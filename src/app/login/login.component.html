@@ -1,0 +1,10 @@
+<form (ngSubmit)="loginValidate()" #loginForm=ngForm class="need-validation">
+  <label> 
+    User Name
+  </label>
+  <input type=text [(ngModel)]="user.userName" required placeholder="Enter Username" #username >
+  <br>
+  <label>Password</label>
+  <input type="password" [(ngModel)]="user.password" required placeholder="Enter Password" #password >
+  <button [disabled]="!loginForm.valid">Login</button>
+</form>
